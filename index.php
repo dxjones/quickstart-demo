@@ -23,7 +23,7 @@ foreach ($list as $var) {
 }
 echo '</pre>' . $cr;
 $time['elapsed'] = microtime(TRUE) - $time['start'];
-echo '<div align="right">elapsed time = ' . $sprintf('%.3f', $time['elapsed']) . '</div>' . $cr;
+echo '<div align="right">elapsed time = ' . sprintf('%.3f', $time['elapsed']) . '</div>' . $cr;
 ?>
 </body>
 </html>
