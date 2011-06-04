@@ -25,6 +25,7 @@ if (array_key_exists('pretest',$_GET)) {
 }
 */
 echo 'Debug Info:' . $cr . $cr;
+array($_SERVER, $_GET, $_POST, $_REQUEST, $_FILES, $_COOKIE, $_SESSION, $_ENV);
 $list = array('_SERVER', '_GET', '_POST', '_REQUEST', '_FILES', '_COOKIE', '_SESSION', '_ENV');
 foreach ($list as $var) {
 	if (isset($$var)) {
