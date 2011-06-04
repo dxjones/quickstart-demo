@@ -12,15 +12,16 @@ $cr = "\n";
 <p>This is a quickstart demo.</p>
 <?
 echo '<pre>' . $cr;
-echo 'Testing explicitly to see if $_SERVER, $_REQUEST are set' . $cr;
-$var = '_SERVER';
-echo '$var = "' . $var . '", isset($$var) is ' . (isset($$var) ? 'TRUE' : 'FALSE') . $cr;
-echo 'isset($_SERVER) is ' . (isset($_SERVER) ? 'TRUE' : 'FALSE') . $cr;
-$var = '_REQUEST';
-echo '$var = "' . $var . '", isset($$var) is ' . (isset($$var) ? 'TRUE' : 'FALSE') . $cr;
-echo 'isset($_REQUEST) is ' . (isset($_REQUEST) ? 'TRUE' : 'FALSE') . $cr;
-echo $cr;
-
+if (array_key_exists('pretest',$_GET)) {
+	echo 'Testing explicitly to see if $_SERVER, $_REQUEST are set' . $cr;
+	$var = '_SERVER';
+	echo '$var = "' . $var . '", isset($$var) is ' . (isset($$var) ? 'TRUE' : 'FALSE') . $cr;
+	echo 'isset($_SERVER) is ' . (isset($_SERVER) ? 'TRUE' : 'FALSE') . $cr;
+	$var = '_REQUEST';
+	echo '$var = "' . $var . '", isset($$var) is ' . (isset($$var) ? 'TRUE' : 'FALSE') . $cr;
+	echo 'isset($_REQUEST) is ' . (isset($_REQUEST) ? 'TRUE' : 'FALSE') . $cr;
+	echo $cr;
+}
 echo 'Debug Info:' . $cr . $cr;
 $list = array('_SERVER', '_GET', '_POST', '_REQUEST', '_FILES', '_COOKIE', '_SESSION', '_ENV');
 foreach ($list as $var) {
