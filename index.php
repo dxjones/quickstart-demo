@@ -18,8 +18,10 @@ foreach ($list as $var) {
 	if (isset($$var)) {
 		echo '$' . $var . ' =' . $cr;
 		print_r($$var);
-		echo '- - - - -' . $cr . $cr;
+	} else {
+		echo '$' . $var . ' is not set' . $cr;
 	}
+	echo '- - - - -' . $cr . $cr;		
 }
 echo '</pre>' . $cr;
 phpinfo();
