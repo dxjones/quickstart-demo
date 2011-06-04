@@ -13,7 +13,11 @@ $cr = "\n";
 <?
 echo '<pre>' . $cr;
 echo 'Testing explicitly to see if $_SERVER, $_REQUEST are set' . $cr;
+$var = '_SERVER';
+echo '$var = "' . $var . '", isset($$var) is ' . (isset($$var) ? 'TRUE' : 'FALSE') . $cr;
 echo 'isset($_SERVER) is ' . (isset($_SERVER) ? 'TRUE' : 'FALSE') . $cr;
+$var = '_REQUEST';
+echo '$var = "' . $var . '", isset($$var) is ' . (isset($$var) ? 'TRUE' : 'FALSE') . $cr;
 echo 'isset($_REQUEST) is ' . (isset($_REQUEST) ? 'TRUE' : 'FALSE') . $cr;
 echo $cr;
 
