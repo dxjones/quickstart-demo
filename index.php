@@ -12,6 +12,7 @@ $cr = "\n";
 <p>This is a quickstart demo.</p>
 <?
 echo '<pre>' . $cr;
+/* 
 if (array_key_exists('pretest',$_GET)) {
 	echo 'Testing explicitly to see if $_SERVER, $_REQUEST are set' . $cr;
 	$var = '_SERVER';
@@ -22,6 +23,7 @@ if (array_key_exists('pretest',$_GET)) {
 	echo 'isset($_REQUEST) is ' . (isset($_REQUEST) ? 'TRUE' : 'FALSE') . $cr;
 	echo $cr;
 }
+*/
 echo 'Debug Info:' . $cr . $cr;
 $list = array('_SERVER', '_GET', '_POST', '_REQUEST', '_FILES', '_COOKIE', '_SESSION', '_ENV');
 foreach ($list as $var) {
