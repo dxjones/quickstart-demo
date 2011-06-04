@@ -1,5 +1,5 @@
 <? // mark.php
-echo '<p>Mark's test code, ...</p>';
+echo '<p>Mark\'s test code, ...</p>';
 
 echo '<b>$_SERVER:</b><br/><br/>';
 foreach ($_SERVER as $k => $v){
