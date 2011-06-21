@@ -5,7 +5,7 @@ $file = 'bug.php';
 ?>
 <!doctype html>
 <html><head><title>Pagoda Box - Bug</title></head><body><h1>PagodaBox Bug</h1><pre>
-<p>Compare <a href="bug.php">bug.php</a> and <a href="bug2.php">bug2.php</a>.</p>
+<p>Compare <a href="bug.php"><b>bug.php</b></a> and <a href="bug2.php"><b>bug2.php</b></a>.</p>
 <?
 /* 
 if (array_key_exists('pretest',$_GET)) {
@@ -15,6 +15,9 @@ if (array_key_exists('pretest',$_GET)) {
 	echo 'isset($_SERVER) is ' . (isset($_SERVER) ? 'TRUE' : 'FALSE') . $cr;
 }
 */
+if (array_key_exists('bug',$_GET)) {
+	$bug = isset($_SERVER);
+}
 $list = array('_SERVER');
 foreach ($list as $var) {
 	if (isset($$var)) {
