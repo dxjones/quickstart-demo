@@ -1,9 +1,11 @@
 <? // bug.php
 $time['start'] = microtime(TRUE);
 $cr = "\n";
+$file = 'bug.php';
 ?>
 <!doctype html>
 <html><head><title>Pagoda Box - Bug</title></head><body><h1>PagodaBox Bug</h1><pre>
+<p>Compare <a href="bug.php">bug.php</a> and <a href="bug2.php">bug2.php</a>.</p>
 <?
 /* 
 if (array_key_exists('pretest',$_GET)) {
@@ -24,6 +26,10 @@ foreach ($list as $var) {
 		print_r($$var);
 	}
 }
+?>
+</pre><hr/><pre>
+<?
+echo htmlspecialchars(file_get_contents($file));
 $time['elapsed'] = sprintf('%.6f msec', 1000*(microtime(TRUE) - $time['start']));
 ?>
-</pre><div align="right">elapsed time = <?= $time['elapsed'] ?></div></body></html>
+</pre><hr/><div align="right">elapsed time = <?= $time['elapsed'] ?></div></body></html>
