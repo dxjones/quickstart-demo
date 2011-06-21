@@ -1,4 +1,4 @@
-<? // bug2.php
+<? // bug.php
 $time['start'] = microtime(TRUE);
 $cr = "\n";
 ?>
@@ -20,6 +20,8 @@ foreach ($list as $var) {
 		print_r($$var);
 	} else {
 		echo '$' . $var . ' is not set' . $cr;
+		echo 'Try printing it anyway, ...' . $cr;
+		print_r($$var);
 	}
 }
 $time['elapsed'] = sprintf('%.6f msec', 1000*(microtime(TRUE) - $time['start']));
