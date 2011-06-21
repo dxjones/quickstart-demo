@@ -1,7 +1,7 @@
-<? // bug.php
+<? // bug2.php
 $time['start'] = microtime(TRUE);
 $cr = "\n";
-$file = 'bug.php';
+$file = 'bug2.php';
 ?>
 <!doctype html>
 <html><head><title>Pagoda Box - Bug</title></head><body><h1>PagodaBox Bug</h1><pre>
@@ -25,6 +25,10 @@ $file = 'bug.php';
 </pre><hr/><pre>
 <?
 	echo htmlspecialchars(file_get_contents($file));
+?>
+</pre><hr/>
+<?
+	phpinfo();
 	$time['elapsed'] = sprintf('%.6f msec', 1000*(microtime(TRUE) - $time['start']));
 ?>
-</pre><hr/><div align="right">elapsed time = <?= $time['elapsed'] ?></div></body></html>
+<hr/><div align="right">elapsed time = <?= $time['elapsed'] ?></div></body></html>
